@@ -1,0 +1,622 @@
+/*
+Max content widths
+*/
+.size-auto, 
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+	max-width: 100%;
+	height: auto
+}
+
+/*
+Header logo
+If you require a Site title and a logo, an example of how to do this is provided below (use your own logo):
+
+#site-title a {
+  display: inline-block;
+	padding-left 60px;
+  background: url(../img/logo.png) 0 0 no-repeat;
+}
+*/
+
+/*
+Main content
+*/
+
+/*
+Sidebar
+*/
+
+.sidebar {
+  margin-top: 20px
+}
+.sidebar section {
+  margin-bottom: 40px
+}
+.sidebar ul,
+.sidebar ol {
+  list-style-type: none;
+  padding: 0
+}
+.sidebar li {
+  margin: 10px 0
+}
+
+/*
+Hide form placeholders on focus
+*/
+
+input:focus::-webkit-input-placeholder { color: transparent; }
+input:focus:-moz-placeholder { color: transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color: transparent; } /* FF 19+ */
+textarea:focus::-webkit-input-placeholder { color: transparent; }
+textarea:focus:-moz-placeholder { color: transparent; } /* FF 4-18 */
+textarea:focus::-moz-placeholder { color: transparent; } /* FF 19+ */ 
+
+/*
+Comments
+*/
+
+#respond {
+  margin-top: 40px
+}
+ol.commentlist {
+	counter-reset: li; /* Initiate a counter */
+	padding: 0
+}
+ol.commentlist ul {
+  padding: 0
+}
+ol.commentlist > li {
+	position: relative;
+	margin: 0 0 20px 0;
+	list-style: none /* Disable the normal item numbering */
+}
+ol.commentlist > li:before {
+  content: "Thread " counter(li); /* Use the counter as content */
+  counter-increment: li; /* Increment the counter by 1 */
+  position:absolute;  
+  top: 0;
+  right: 0;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-bottom-left-radius: 4px;
+  padding: 5px 20px 5px 10px;
+  color: #999
+}
+ol.commentlist li ol,
+ol.commentlist li ul {
+  list-style-type: none;
+  margin: 0
+}
+
+.commentlist li li {
+  background: #f8f8f8;
+}
+.commentlist li li li {
+  background: #fff
+}
+.commentlist li li li li {
+  background: #f8f8f8
+}
+.commentlist li li li li li li {
+  background: #fff
+}
+.commentlist li {
+  padding: 20px
+}
+.commentlist ul li {
+  margin-top: 20px;
+  margin-bottom: 0
+}
+.reply p {
+  margin: 0
+}
+
+
+/*
+User Styles
+*/
+/* --------------------------- */
+.body {
+	font-family: "museo-sans", sans-serif;
+}
+
+section.main {
+	padding-left: 200px;
+	padding-right: 200px;
+}
+
+section.main h2 {
+	color: #952f79;
+	font-size: 28px;
+}
+
+section.main h3 {
+	color: #e58e38;
+	text-transform: uppercase;
+	font-size: 18px;
+}
+/* --------------------------- */
+/* Header Styles */
+
+header {
+	background-image: url("hero_bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 450px;
+	color: #6c6c6c;
+	margin-bottom: 60px;
+	top: 0;
+}
+header.navigation {
+	background-image: url("carnegie.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 470px;	
+	margin-bottom: 60px;
+}
+header .container-fluid {
+	background-color: rgba(255,255,255,0.8);
+	height: 149px;
+	position: relative;
+}
+
+header.scrolled .container-fluid {
+ 	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 1000;
+	height: 86px;
+	max-height: 82px;
+	transition: height 0.3s;
+}
+
+/* --------------------------- */
+/* Navbar */
+
+nav.navbar-default {
+	background-color: inherit;
+	border: none;
+}
+nav.navbar-default ul.dropdown-menu {
+	background-color: rgba(255,255,255,0.8);
+}
+nav.navbar-default ul.dropdown-menu a{
+	padding: 5px 10px;
+	text-align: left;
+}
+
+/* --------------------------- */
+/* Navbar-Header */
+header .navbar-header a {
+	opacity: 1.0;
+	transition: opacity linear 0.2s;
+}
+header .navbar-header a:hover {
+	opacity: 0.7;
+}
+header .navbar-header img {
+	opacity: 1.0;
+  transition: opacity 0.1s;
+}
+header.scrolled .navbar-header img {
+	opacity: 0.0;
+	position: absolute;
+	bottom: 0;
+}
+header.navigation a h1.logo {
+	color: #952f79;
+	font-size: 16px;
+	letter-spacing: 1px;
+	opacity: 0.0;
+  transition: opacity ease-out 0.1s;
+	position: absolute;
+	top: 28px;
+}
+header.scrolled a h1.logo {
+	opacity: 1.0;
+}
+header 
+.navbar-default .navbar-collapse {
+	border-top: none;
+}
+.navbar-toggle {
+	margin-top: 0px;
+}
+/* --------------------------- */
+/* Start Top-nav/Searchbar Styles*/
+
+.top-nav {
+	float: right;
+	font-size: 14px;
+	letter-spacing: 2px;
+	padding-top: 5px;
+}
+header.scrolled .top-nav{
+	display: none;
+}
+.top-nav li a {
+	color: #7c7c7c;
+}
+.top-nav li a:hover {
+	color: #000;
+}
+.top-nav li a i {
+	font-size: 18px;
+	padding-top: 10px;
+}
+.searchbar {
+	clear: right;
+	max-width: 300px;
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+header.scrolled .searchbar {
+	display: none;
+}
+.searchbar input.form-control {
+	
+}
+/* --------------------------- */
+/* Main-Navigation links */
+ul.navbar-nav {
+	float: right;
+	clear: right;
+	text-align: right;
+	padding-top: 0px;
+	border: none;
+}
+ul.navbar-nav li a {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+header.scrolled ul.navbar-nav {
+	padding-top: 32px;
+}
+.navbar-default ul.navbar-nav li.active a {
+	background-color: transparent;
+}
+.navbar-default ul.navbar-nav li.dropdown a.dropdown-toggle {
+	background-color: transparent;
+	color: #000;
+}
+.navbar-default ul.navbar-nav li.dropdown a.dropdown-toggle:hover {
+	background-color: #952f79;
+	color: #fff; 
+}
+.navbar-default ul.navbar-nav li.dropdown.open a.dropdown-toggle {
+	background-color: #952f79;
+	color: #fff; 
+}
+.navbar-default .navbar-nav li a {
+	background-color: transparent;
+	color: #000;
+}
+/* Locations non-dropdown */
+.navbar-default .navbar-nav li a:hover {
+	color: #fff;
+	background-color: #952f79;
+}
+.navbar-default .navbar-nav li.active a:focus {
+	background-color: #952f79;
+	color: #fff;
+}
+.navbar-default .navbar-nav li.active a:hover {
+	color: #fff;
+	background-color: #952f79;
+}
+
+
+/* Main-nav Dropdown */
+.navbar-default ul.dropdown-menu {
+	padding: 0px 0px;
+	border: none;
+}
+.navbar-default ul.dropdown-menu li a{
+	padding: 7px 10px;
+	color: #000;
+	text-decoration: none;	
+}
+.navbar-default ul.dropdown-menu li a:hover {
+	background-color: transparent;
+	text-decoration: underline;
+	color: #000;
+}
+.navbar-default ul.navbar-nav li.active a {
+	color: #000;
+}
+
+
+/* --------------------------- */
+/* Button.Navbar-Toggle */
+
+nav.navbar-default .navbar-header .navbar-toggle {
+	transition: all ease-out 0.1s;
+	border: none;
+	font-size: 36px;
+	background-color: inherit;
+	color: rgba(149,47,121,1.0);
+	position: relative;
+	bottom: -45px;
+}
+header.scrolled nav.navbar-default .navbar-header .navbar-toggle {
+	bottom: -38px;
+	font-size: 24px;
+}
+nav.navbar-default .navbar-header .navbar-toggle:hover {
+	background-color: inherit;
+	color: rgba(149,47,121,0.8)
+}
+.navbar-collapse ul.navbar-nav li.open a.dropdown-toggle {
+	background-color: #952f79;
+	color: #fff;
+	text-decoration: none;
+}
+
+/* --------------------------- */
+/* end navbar-default */
+
+/* --------------------------- */
+/* MEDIA QUERIES */
+@media screen and (max-width: 992px) {
+	header.scrolled ul.navbar-nav li a {
+		padding-left: 5px;
+		padding-right: 5px;
+		font-size: 14px;
+	}
+}
+/* --------------------------- */
+@media screen and (max-width: 768px) {
+	header.scrolled .container-fluid {
+		height: 90px;
+		transition: height 0.3s;
+	}
+	header.scrolled a h1.logo {
+		top: 36px;
+	}
+	.top-nav {
+		display: none;
+	}
+	.searchbar {
+		display: none;
+	}
+	ul.navbar-nav {
+		width: 100%;
+		margin: 0 auto;
+		background-color: rgba(255,255,255,0.8);
+		text-align: center;
+		margin-top: 5px;
+	}
+	header.scrolled .navbar-header {
+		height: 78px;
+		padding-top: 0px;
+	}
+	header.scrolled ul.navbar-nav {
+		padding-top: 0px;
+}
+	header.scrolled .navbar-default .navbar-collapse {
+		position: relative;
+		top: -1px;
+	}
+	header.scrolled .navbar-nav ul li  a {
+		color: #000;
+	}
+	.navbar-toggle {
+		position: relative;
+	}
+	nav.navbar-default ul.dropdown-menu a {
+		text-align: center;
+	}
+}
+/* --------------------------- */
+/* overlay-featured*/
+
+.featured-text {
+	z-index: 1;
+	width: 100%;
+	position: relative;
+	bottom: 40px;
+}
+.featured-text h2 {
+	padding-top: 50px;
+	color: #fff;
+	font-size: 104px;
+	font-style: italic;
+	font-family: eb-garamond;
+}
+.featured-text ul {
+	margin: 0 auto;
+}
+.featured-text ul li {
+	color: #fff;
+	font-size: 40px;
+	text-transform: uppercase;
+	font-family: "museo-sans", sans-serif;
+	font-weight: 300;
+	letter-spacing: 4px;
+}
+.featured-text ul li div {
+ 	height: 2px;
+	width: 150px;
+	background-color: #fff;
+	margin-bottom: 15px;
+}
+
+/* end Header Styles */
+/* --------------------------- */
+/* Front-page Styles */
+
+section.front .col-md-2 img {
+	width: 100%;
+	padding: 10px;
+	display: block;
+	margin: auto;
+}
+section.front .col-md-2 p {
+	text-align: center;
+	font-size: 18px;
+	padding-top: 5px;
+	letter-spacing: 1px;
+}
+section.front .col-md-2 .one {color: #e58e38;}
+section.front .col-md-2 .two {color: #6b5b4c;}
+section.front .col-md-2 .three {color: #7daa94;}
+section.front .col-md-2 .four {color: #d7755b;}
+section.front .col-md-2 .five {color: #837f4f;}
+section.front .col-md-2 .six {color: #654f6e;}
+
+/* end Front-page Styles */
+/* --------------------------- */
+/* About page Styles */
+
+section.about {
+	background-color: #fff;
+}
+section.about .container {
+	padding: 0px 140px;
+}
+section.about h2 {
+	color: #952f79;
+	font-size: 24px;
+	padding: 20px 0px 10px 0px;
+}
+section.about h3 {
+	color: #e58e38;
+	font-size: 18px;
+	text-transform: uppercase;
+	padding: 0px 0px 20px 0px;
+	letter-spacing: 1.2px;
+}
+section.about p {
+	color: #444;
+	letter-spacing: 1px;
+	line-height: 1.4;
+	font-weight: 300;
+	font-family: "museo-sans", sans-serif;
+}
+.slick-about {
+	margin: 0px 60px;
+}
+.slick-about img {
+	margin: 0 auto;
+}
+
+/* end About page Styles*/
+/* --------------------------- */
+/* News/Events page Styles */
+
+section.news .event {
+	padding-top: 14px;
+	padding-left: 140px;
+	padding-right: 140px;
+}
+section.news .event img {
+	float: left;
+	margin-right: 15px;
+}
+section.news .event p.event-title {
+	padding-top: 20px;
+	color: #952f79;
+	font-size: 16px;
+	margin-bottom: 4px;
+}
+section.news .event p.event-desc {
+	padding: 20px 0px;
+	font-size: 16px;
+}
+section.news .event .col-xs-12 {
+	border-bottom: 1px solid #edeff4;
+	padding-bottom: 20px;
+}
+section.news .event .social-box {
+	background-color: #edeff4;
+	width: 150px;
+	height: 40px;
+}
+section.news .event .social-box ul {
+	padding-left: 20px;
+}
+section.news .event .social-box ul li {
+	color: #e58e38;
+}
+section.news .event .social-box span {
+	padding:  10px 2px 0px 0px;
+	color: #952f79;
+}
+
+/* end News/Events page Styles */
+/* --------------------------- */
+/* Locations pages Styles */
+
+section.locations .container {
+	padding: 0px 140px;
+}
+
+/* end Locations pages Styles*/
+/* --------------------------- */
+/* Fat Footer Styles */
+
+footer.fat {
+	width: 100%;
+	height: auto;
+	background-color: #fcf9f6;
+	padding: 0px;
+	margin-top: 50px;
+}
+footer.fat .col-sm-4 {
+	border-right: 1px solid #dbd8d6;
+	padding-left: 40px;
+	margin: 40px 0px;
+}
+footer.fat .col-sm-4:last-child {
+	border: none;
+}
+footer.fat h4 {
+	color: #952f79;
+	font-size: 32px;
+	font-weight: 400;
+	font-family: "museo-sans", sans-serif;
+	margin: 0px;
+	padding-bottom: 30px;
+}
+footer.fat p {
+	font-size: 18px;
+	font-family: "nunito", sans-serif;
+	line-height: 1.2;
+	color: #444;
+}
+footer.fat .embed {
+	height: 200px;
+	width: 300px;
+	background-color: #444;
+}
+footer.fat .fb {
+	width: 270px;
+	height: 60px;
+	margin-bottom: 8px;
+	background-color: #dbd8d6;
+	border-radius: 3px;
+}
+
+/* end Fat Footer Styles */
+/* --------------------------- */
+/* Footer Styles */
+
+footer {
+	height: 50px;
+	background-color: #efe9e1;
+}
+footer p.text-center {
+	padding-top: 15px; 
+	color: #a09e9c;
+}
+
+/* end Footer Styles*/
+
+
+
